@@ -18,7 +18,7 @@ Point = Tuple[int, int]
 def main() -> None:
     pygame.init()
     screen: pygame.Surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-    pygame.display.set_caption("Computer Graphics: Primitives and Algorithms")
+    pygame.display.set_caption("Computação gráfica: Lista 01")
 
     my_polygon: List[Point] = [
         (600, 100),
