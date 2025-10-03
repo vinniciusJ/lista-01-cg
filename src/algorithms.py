@@ -86,12 +86,12 @@ def cohen_sutherland_clip(
 
             if outside_code & TOP:
                 dy = y2 - y1
-                x = x1 + (x2 - x1) * (ymax - y1) / dy if dy != 0 else x1
-                y = ymax
-            elif outside_code & BOTTOM:
-                dy = y2 - y1
                 x = x1 + (x2 - x1) * (ymin - y1) / dy if dy != 0 else x1
                 y = ymin
+            elif outside_code & BOTTOM:
+                dy = y2 - y1
+                x = x1 + (x2 - x1) * (ymax - y1) / dy if dy != 0 else x1
+                y = ymax
             elif outside_code & RIGHT:
                 dx = x2 - x1
                 y = y1 + (y2 - y1) * (xmax - x1) / dx if dx != 0 else y1
